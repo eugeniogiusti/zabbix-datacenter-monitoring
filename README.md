@@ -92,8 +92,3 @@ Log in to the Zabbix dashboard with the default credentials:
    ```bash
    Username: Admin
    Password: zabbix
-
-
-
-
-   
