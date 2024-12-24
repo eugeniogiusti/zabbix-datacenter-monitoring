@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Path del file di configurazione
+# Path configuration file MySQL
 CONFIG_FILE="/etc/mysql/mysql.conf.d/mysqld.cnf"
 
 # Step 1: Installing Zabbix repository
