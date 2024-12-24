@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Path del file di configurazione
+CONFIG_FILE="/etc/mysql/mysql.conf.d/mysqld.cnf"
+
 # Step 1: Installing Zabbix repository
 echo "Step 1: Installing Zabbix repository..."
 wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_6.4+ubuntu22.04_all.deb
@@ -11,7 +14,7 @@ echo "Step 2: Installing packets..."
 apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent
 
 # Step 3: Installing and Enabling MySQL
-echo "Step 3: Installazione MySQL..."
+echo "Step 3: Installing MySQL..."
 apt install -y mysql-server
 systemctl start mysql
 systemctl enable mysql
@@ -39,7 +42,7 @@ QUIT;
 EOF
 
 # Step 6: Schema importing
-echo "Step 6: Importing schema DB..."
+echo "Step 6: Importing schema DB, waiting in this step..."
 zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -pPassword2025! zabbix
 
 # Step 7: Disabling log_bin_trust_function_creators
@@ -56,8 +59,18 @@ sed -i 's/# ValueCacheSize=8M/ValueCacheSize=64M/' /etc/zabbix/zabbix_server.con
 
 # Step 9: Optimizing MySQL
 echo "Step 9: Optimizing MySQL..."
-sed -i 's/# log_bin/log_bin = \/var\/log\/mysql\/mysql-bin.log/' /etc/mysql/mysql.conf.d/mysqld.cnf
-sed -i 's/# binlog_expire_logs_seconds/binlog_expire_logs_seconds = 432000/' /etc/mysql/mysql.conf.d/mysqld.cnf
+# Verify if the file exists
+if [ ! -f "$CONFIG_FILE" ]; then
+    echo "the file $CONFIG_FILE doesn't exist"
+    exit 1
+fi
+
+# Security Backup
+cp "$CONFIG_FILE" "$CONFIG_FILE.backup"
+
+# Changing the values
+sed -i -E 's|^#[[:space:]]*log_bin[[:space:]]*=.*$|log_bin = /var/log/mysql/mysql-bin.log|' "$CONFIG_FILE"
+sed -i -E 's|^#[[:space:]]*binlog_expire_logs_seconds[[:space:]]*=.*$|binlog_expire_logs_seconds     = 432000|' "$CONFIG_FILE"
 
 
 # Step 10: Enabling Zabbix
