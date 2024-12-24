@@ -10,7 +10,7 @@ dpkg -i zabbix-release_latest_6.4+ubuntu22.04_all.deb
 apt update
 
 # Step 2: Necessary packages
-echo "Step 2: Installing packets..."
+echo "Step 2: Installing packages..."
 apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent
 
 # Step 3: Installing and Enabling MySQL
@@ -53,7 +53,7 @@ QUIT;
 EOF
 
 # Step 8: Configuring Zabbix Server
-echo "Step 8: Optimizing zabbix_server.conf..."
+echo "Step 8: Optimizing Zabbix server..."
 sed -i 's/# DBPassword=/DBPassword=Password2025!/' /etc/zabbix/zabbix_server.conf
 sed -i 's/# ValueCacheSize=8M/ValueCacheSize=64M/' /etc/zabbix/zabbix_server.conf
 
