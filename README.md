@@ -7,11 +7,6 @@ This repository contains a Bash script for automating the installation and confi
 
 ---
 
-## **Introduction**
-
-Zabbix is a powerful monitoring platform for IT infrastructures.  
-This script was tested in a real-world datacenter scenario that provided hosting and management services for virtual machines running specific applications.  
-
 ### **Test Environment**
 - **80 VMs** (Linux and Windows).
 - **4 hyper-converged cluster virtualizers**.
