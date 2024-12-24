@@ -42,7 +42,7 @@ In the configuration file `/etc/mysql/mysql.conf.d/mysqld.cnf`, the following ch
    
 **Benefits**:
 - Reduces disk space used by binary logs while maintaining an adequate recovery window
-- Efficient File Management: Smaller, more manageable log files improve read/write speed and simplify replication.
+- Efficient File Management: Smaller, more manageable log files improve read/write speed.
 - binlog_expire_logs_seconds = 432000 (from 2592000, equivalent to 30 days, to 432000, equivalent to 5 days).
 
 
