@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Path configuration file MySQL
+# Path to MySQL configuration
 CONFIG_FILE="/etc/mysql/mysql.conf.d/mysqld.cnf"
 
 # Step 1: Installing Zabbix repository
@@ -9,7 +9,7 @@ wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix
 dpkg -i zabbix-release_latest_6.4+ubuntu22.04_all.deb
 apt update
 
-# Step 2: Necessary packages
+# Step 2: Required packages
 echo "Step 2: Installing packages..."
 apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent
 
@@ -74,7 +74,7 @@ sed -i -E 's|^#[[:space:]]*binlog_expire_logs_seconds[[:space:]]*=.*$|binlog_exp
 
 
 # Step 10: Enabling Zabbix
-echo "Step 10: enabling and running zabbix services..."
+echo "Step 10: Enabling and running zabbix services..."
 systemctl restart zabbix-server zabbix-agent apache2
 systemctl enable zabbix-server zabbix-agent apache2
 
