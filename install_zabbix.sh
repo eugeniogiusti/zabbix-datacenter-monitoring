@@ -57,8 +57,8 @@ sed -i 's/# ValueCacheSize=8M/ValueCacheSize=64M/' /etc/zabbix/zabbix_server.con
 # Step 9: Optimizing MySQL
 echo "Step 9: Optimizing MySQL..."
 sed -i 's/# log_bin/log_bin = \/var\/log\/mysql\/mysql-bin.log/' /etc/mysql/mysql.conf.d/mysqld.cnf
-sed -i 's/# binlog_expire_logs_seconds/binlog_expire_logs_seconds/' /etc/mysql/mysql.conf.d/mysqld.cnf
-sed -i 's/binlog_expire_logs_seconds = 2592000/binlog_expire_logs_seconds = 432000/' /etc/mysql/mysql.conf.d/mysqld.cnf
+sed -i 's/# binlog_expire_logs_seconds/binlog_expire_logs_seconds = 432000/' /etc/mysql/mysql.conf.d/mysqld.cnf
+
 
 # Step 10: Enabling Zabbix
 echo "Step 10: enabling and running zabbix services..."
