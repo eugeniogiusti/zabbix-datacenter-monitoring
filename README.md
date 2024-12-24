@@ -7,7 +7,7 @@ This repository contains a Bash script for automating the installation and confi
 
 ---
 
-### **Test Environment**
+### **Test Environment - Monitored Devices**
 - **80 VMs** (Linux and Windows).
 - **4 hyper-converged cluster virtualizers**.
 - **2 layer switches**.
