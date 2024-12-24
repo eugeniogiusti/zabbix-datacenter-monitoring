@@ -27,7 +27,7 @@ This repository contains a Bash script for automating the installation and confi
 In the configuration file `/etc/zabbix/zabbix_server.conf`, the `ValueCacheSize` value was adjusted to **64MB**.  
 
 **Benefits**:
-- Provides better stability for environments with a high number of monitored metrics (80+ VMs).
+- Provides better stability for environments with a high number of monitored metrics (90+ VMs).
 - Enhances performance for caching metrics.
 
 ---
