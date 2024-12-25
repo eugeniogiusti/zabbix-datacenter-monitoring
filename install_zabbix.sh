@@ -86,4 +86,4 @@ sudo ufw allow 10051/tcp
 sudo ufw allow 3306/tcp
 
 # Final message
-echo "Installation complete reach your server on the browser: http://yourip/zabbix!"
+echo "Installation complete reach your server on the browser: http://your_local_ip/zabbix"
