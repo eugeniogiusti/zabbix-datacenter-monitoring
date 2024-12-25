@@ -76,6 +76,7 @@ In the configuration file `/etc/mysql/mysql.conf.d/mysqld.cnf`, the following ch
 
 6. **Complete the initial configuration wizard:
 Enter the database details configured by the script:
+
 ![ksnip_20241223-213703](https://github.com/user-attachments/assets/c40eaffb-a578-422c-9549-71c3295830cc)
 
 
