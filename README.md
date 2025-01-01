@@ -30,10 +30,6 @@ Benefits:
 - Provides better stability for environments with a high number of monitored metrics (90+ VMs).
 - Enhances performance for caching metrics.
 
-## Notes
-
-- This script is intended for fresh Ubuntu 22.04 installations.
-
 ---
 
 ### 2. MySQL Optimization
@@ -49,6 +45,10 @@ Benefits:
 - Efficient File Management: Smaller, more manageable log files improve read/write speed.
 - binlog_expire_logs_seconds = 432000 (from 2592000, equivalent to 30 days, to 432000, equivalent to 5 days).
 
+## Notes
+
+- This script is intended for fresh Ubuntu 22.04 installations.
+---
 
 ## How to Run the Script
 
