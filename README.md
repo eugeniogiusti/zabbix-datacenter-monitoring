@@ -15,7 +15,7 @@ This repository contains a Bash script for automating the installation and confi
 - 1 enterprise NAS for secure VM backups.
 
 ### Recommended Hardware Requirements for Virtual machine
-- 150GB SSD (SSD virtual hard disk).
+- 150GB SSD.
 - 8GB RAM.
 - 4 vCPUs.
 
