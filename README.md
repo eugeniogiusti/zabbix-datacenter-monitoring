@@ -87,7 +87,19 @@ Enter the database details configured by the script:
 Database Name: zabbix
 - User: zabbix
 - Password: Password2025!
-- Change this password within the script if necessary | line 38 of the script | CREATE USER 'zabbix'@'localhost' IDENTIFIED BY 'Password2025!';
+- Password Customization Notice:
+If you wish to change the default password (currently set as Password2025!) used in the script, please update it consistently in the following locations:
+
+    Step 5: Creating Zabbix DB (around line 38)
+    Update the MySQL command that creates the Zabbix user with the new password.
+
+    Step 6: Schema importing (around line 45)
+    Change the -pPassword2025! part in the MySQL command to match the new password.
+
+    Step 8: Configuring Zabbix Server (around line 55)
+    Modify the password in the Zabbix server configuration file (in the line setting DBPassword=) accordingly.
+
+Failure to update all these sections with the new password may result in connection errors.
 
 
 Follow the steps to finish the setup.
