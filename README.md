@@ -86,7 +86,7 @@ Enter the database details configured by the script:
 
 Database Name: zabbix
 User: zabbix
-Password: Password2025! # Change this password within the script if necessary
+Password: Password2025! # Change this password within the script if necessary | line 38 of the script | CREATE USER 'zabbix'@'localhost' IDENTIFIED BY 'Password2025!';
 
 
 Follow the steps to finish the setup.
