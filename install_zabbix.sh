@@ -48,7 +48,6 @@ zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-charact
 echo "Step 7: Disabling log_bin_trust_function_creators..."
 mysql -uroot <<EOF
 SET GLOBAL log_bin_trust_function_creators = 0;
-QUIT;
 EOF
 
 # Step 8: Configuring Zabbix Server
