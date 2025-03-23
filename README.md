@@ -102,7 +102,7 @@ If you wish to change the default password (currently set as Password2025!) used
 Failure to update all these sections with the new password may result in connection errors.
 
 
-Follow the steps to finish the setup.
+- Follow the steps to finish the setup.
 Log in to the Zabbix dashboard with the default credentials:
 
    ```bash
