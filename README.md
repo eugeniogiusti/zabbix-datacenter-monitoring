@@ -86,7 +86,8 @@ Enter the database details configured by the script:
 
 Database Name: zabbix
 User: zabbix
-Password: Password2025!
+Password: Password2025! # Change this password within the script if necessary
+
 
 Follow the steps to finish the setup.
 Log in to the Zabbix dashboard with the default credentials:
