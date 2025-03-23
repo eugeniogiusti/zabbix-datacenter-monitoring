@@ -31,7 +31,7 @@ y
 y
 EOF
 
-# Step 5: Creating Zabbix DB # Change the password if necessary at line 38
+# Step 5: Creating Zabbix DB
 echo "Step 5: Creating Zabbix DB and MySQL user..."
 mysql -uroot <<EOF
 CREATE DATABASE zabbix CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
@@ -40,7 +40,7 @@ GRANT ALL PRIVILEGES ON zabbix.* TO 'zabbix'@'localhost';
 SET GLOBAL log_bin_trust_function_creators = 1;
 EOF
 
-# Step 6: Schema importing # Change the password if changed previously at line 45
+# Step 6: Schema importing 
 echo "Step 6: Importing schema DB, waiting in this step..."
 zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -pPassword2025! zabbix
 
@@ -50,7 +50,7 @@ mysql -uroot <<EOF
 SET GLOBAL log_bin_trust_function_creators = 0;
 EOF
 
-# Step 8: Configuring Zabbix Server # Change the password if changed previously at line 55
+# Step 8: Configuring Zabbix Server
 echo "Step 8: Optimizing Zabbix server..."
 sed -i 's/# DBPassword=/DBPassword=Password2025!/' /etc/zabbix/zabbix_server.conf
 sed -i 's/# ValueCacheSize=8M/ValueCacheSize=64M/' /etc/zabbix/zabbix_server.conf
