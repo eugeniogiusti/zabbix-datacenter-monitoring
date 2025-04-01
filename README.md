@@ -1,6 +1,14 @@
 # zabbix-datacenter-monitoring
 Bash script for deploying Zabbix 6.4 on Ubuntu 22.04 with optimized settings for datacenter environments.
 
+![Status](https://img.shields.io/badge/status-in--development-yellow)
+![Last Commit](https://img.shields.io/github/last-commit/eugeniogiusti/zabbix-datacenter-monitoring)
+![License](https://img.shields.io/github/license/eugeniogiusti/zabbix-datacenter-monitoring)
+![Top Language](https://img.shields.io/github/languages/top/eugeniogiusti/zabbix-datacenter-monitoring)
+![Stars](https://img.shields.io/github/stars/eugeniogiusti/zabbix-datacenter-monitoring?style=social)
+![Platform](https://img.shields.io/badge/platform-Linux-blue)
+![Tool](https://img.shields.io/badge/tool-Zabbix-red)
+
 # Zabbix 6.4 Installation and Configuration on Ubuntu 22.04
 
 This repository contains a Bash script for automating the installation and configuration of Zabbix 6.4 on an Ubuntu 22.04 server using the LAMP stack.
